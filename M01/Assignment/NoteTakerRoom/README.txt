@@ -23,3 +23,11 @@ Issue 4:
 
 missing context 
 added context to the list
+
+Issue 5:
+instead of fun getId it is just id
+
+Issue 6:
+Error Inflating Recycler View
+
+fixed XML file
