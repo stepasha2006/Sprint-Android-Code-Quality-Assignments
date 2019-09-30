@@ -78,7 +78,6 @@ dependencies {
 
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
-    kapt "androidx.room:room-compiler:$room_version"
 
     implementation "android.arch.lifecycle:extensions:$aac_version"
 
@@ -92,9 +91,9 @@ dependencies {
 
     implementation 'com.squareup.retrofit2:converter-gson:2.6.2'
 
-    implementation 'com.squareup.okhttp3:okhttp:4.1.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.2.0'
 
-    implementation 'com.squareup.okhttp3:logging-interceptor:4.1.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.2.0'
 
 
 
