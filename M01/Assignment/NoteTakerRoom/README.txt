@@ -18,3 +18,8 @@ Issue 3:
 e: [kapt] An exception occurred: java.util.NoSuchElementException: Collection contains no element matching the predicate.
 
 kapt sounds like it's an issue with the gradle file, make sure that "apply plugin: 'kotlin-kapt'  " is at the top of it.
+
+Issue 4:
+
+missing context 
+added context to the list
