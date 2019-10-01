@@ -38,6 +38,7 @@ dependencies {
 
     debugImplementation 'com.facebook.stetho:stetho:1.5.1'
     debugImplementation 'com.facebook.stetho:stetho-okhttp3:1.5.1'
+    implementation 'com.squareup.moshi:moshi:1.8.0'
 
 }
 repositories {
