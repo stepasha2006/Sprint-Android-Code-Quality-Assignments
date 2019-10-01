@@ -31,3 +31,6 @@ Issue 6:
 Error Inflating Recycler View
 
 fixed XML file
+
+Issue 7:
+ Caused by: java.lang.IllegalArgumentException: Version must be >= 1, was 0

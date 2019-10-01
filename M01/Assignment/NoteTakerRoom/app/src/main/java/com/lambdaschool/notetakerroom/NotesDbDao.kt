@@ -37,9 +37,8 @@ object NotesDbDao {
     }
 
     private fun getNoteFromCursor(cursor: Cursor): Note {
-        var index: Int
+        var index: Int = cursor.getColumnIndexOrThrow(NotesDbContract.NotesEntry.COLUMN_NAME_TITLE)
         val note: Note
-        index = cursor.getColumnIndexOrThrow(NotesDbContract.NotesEntry.COLUMN_NAME_TITLE)
         val title = cursor.getString(index)
 
         index = cursor.getColumnIndexOrThrow(NotesDbContract.NotesEntry.COLUMN_NAME_CONTENT)
@@ -72,6 +71,7 @@ object NotesDbDao {
         }
     }
 
+    @JvmStatic
     fun createNote(note: Note) {
         if (db != null) {
             val values = ContentValues()
@@ -100,6 +100,7 @@ object NotesDbDao {
         }
     }
 
+    @JvmStatic
     fun updateNote(note: Note) {
         if (db != null) {
             val whereClause = String.format("%s = '%s'",
@@ -122,6 +123,7 @@ object NotesDbDao {
         }
     }
 
+    @JvmStatic
     fun deleteNote(note: Note) {
         if (db != null) {
             val whereClause = String.format("%s = '%s'",
