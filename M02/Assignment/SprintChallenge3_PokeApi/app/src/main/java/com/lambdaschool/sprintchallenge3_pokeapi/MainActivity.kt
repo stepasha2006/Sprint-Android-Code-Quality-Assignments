@@ -8,9 +8,39 @@ import android.os.Bundle
 import android.view.View
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), Callback<Pokemon> {
+    companion object {
+
+        var pokeList: MutableList<Pokemon> = arrayListOf()
+
+        var search: MutableList<Pokemon> = arrayListOf()
+
+        var favoritesList: MutableList<Pokemon> = arrayListOf()
+
+    }
+    override fun onFailure(call: Call<Pokemon>, t: Throwable) {
+        Toast.makeText(this, "The call failed", Toast.LENGTH_SHORT).show()
+    }
+
+    override fun onResponse(call: Call<Pokemon>, response: Response<Pokemon>) {
+        if (response.isSuccessful) {
+            search.clear()
+            search.add(response.body()!!)
+            if (!pokeList.contains(response.body()!!)) {
+                pokeList.add(response.body()!!)
+            }
+            context.apply {
+                search
+            }
+        } else {
+            Toast.makeText(this, "was not successful", Toast.LENGTH_SHORT)
+        }    }
 
     internal var context: Context? = null
 
