@@ -4,6 +4,9 @@ package com.example.assignmentcalculator
 class Math {
     fun addNumbers(a: Float, b: Float): Float{
         return a + b
-
+    }
+    //subtract numbers
+    fun subtractNumber(a: Float, b: Float): Float{
+        return a - b
     }
 }
