@@ -9,4 +9,12 @@ class Math {
     fun subtractNumber(a: Float, b: Float): Float{
         return a - b
     }
+    //multiplying
+    fun multiplyNumbers(a: Float, b: Float): Float{
+        return a * b
+    }
+    //dividing
+    fun divideNumbers(a: Float, b: Float): Float{
+        return a / b
+    }
 }

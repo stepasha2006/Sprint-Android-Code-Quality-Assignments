@@ -35,8 +35,28 @@ class MathTest {
         //execute
         val sum = calculator.add(num1, num2)
         assertEquals(expected, sum)
-
-
+    }
+    //test multiply
+    @Test
+    fun multiplication() {
+        val num1 = 5.0f
+        val num2 = 2.0f
+        val expected = 10.0f
+        `when`(math.addNumbers(num1, num2)).thenReturn(expected)
+        //execute
+        val sum = calculator.add(num1, num2)
+        assertEquals(expected, sum)
+    }
+    //test divide
+    @Test
+    fun dvision() {
+        val num1 = 10.0f
+        val num2 = 2.0f
+        val expected = 5.0f
+        `when`(math.addNumbers(num1, num2)).thenReturn(expected)
+        //execute
+        val sum = calculator.add(num1, num2)
+        assertEquals(expected, sum)
     }
 
 }
