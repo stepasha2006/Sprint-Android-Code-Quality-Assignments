@@ -13,5 +13,5 @@ class Calculator(private val math: Math) {
     fun divide(a: Float, b: Float): Float{
         return math.divideNumbers(a, b)
     }
-    
+
 }
